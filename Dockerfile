@@ -1,4 +1,4 @@
 FROM ubuntu:latest
 
-COPY SchemaChangeMock /SchemaChangeMock
-ENTRYPOINT ["/SchemaChangeMock/cli.sh"]
+COPY /schemachange/cli.sh  /cli.sh
+ENTRYPOINT ["/cli.sh"]
