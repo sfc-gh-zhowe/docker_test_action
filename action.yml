@@ -4,7 +4,7 @@ inputs:
   schemachange_path:
     description: path where schemachange code is found in the GHA VM
     required: true
-    default: /docker_test_code
+    default: /home/runner/work/docker_test_code/docker_test_code
     
   command-line: #input ID
     decription: 'Command line to container'
