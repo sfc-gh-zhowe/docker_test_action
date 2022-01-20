@@ -1,0 +1,16 @@
+name: 'Docker Test'
+description: 'Simulate call to SchemaChange'
+inputs:
+  command-line: #input ID
+    decription: 'Command line to container'
+    required: true
+    default: 'Default Input'
+outputs:
+  time: #output ID
+    description: 'The output time'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command-line }}
+    
