@@ -13,7 +13,6 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   execute_docker:
     runs-on: ubuntu-latest
     steps:
@@ -27,4 +26,4 @@ jobs:
           command-line: 'This is my command line'
           
       - name: Get output time
-        run: echo "The time was ${{ steps.docker.outputs.time }}        
+        run: echo "The time was ${{ steps.docker.outputs.time }}"
