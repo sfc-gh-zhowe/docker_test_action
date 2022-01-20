@@ -1,5 +1,5 @@
 FROM ubuntu:latest
 
-RUN mkdir -p /github/workspace
+RUN mkdir -p ${GITHUB_WORKSPACE}
 
-ENTRYPOINT ["/github/workspace/cli.sh"]
+ENTRYPOINT ["${GITHUB_WORKSPACE}/cli.sh"]
