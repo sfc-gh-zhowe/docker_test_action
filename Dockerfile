@@ -1,3 +1,5 @@
 FROM ubuntu:latest
 
-ENTRYPOINT ["//github/workspace/cli.sh"]
+RUN mkdir -p /github/workspace
+
+ENTRYPOINT ["/github/workspace/cli.sh"]
