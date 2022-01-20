@@ -1,4 +1,5 @@
 FROM ubuntu:latest
 
-COPY /schemachange/cli.sh  /cli.sh
-ENTRYPOINT ["/cli.sh"]
+RUN mkdir /schemachange
+
+ENTRYPOINT ["/schemachange/cli.sh"]
