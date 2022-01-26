@@ -1,5 +1,11 @@
 FROM ubuntu:latest
 
-RUN mkdir -p /github/workspace
+RUN apt-get update
+RUN apt-get -y install git
+RUN apt-get -y install python3
+RUN apt-get -y install python3-pip
+RUN pip install schemachange
 
-ENTRYPOINT ["/github/workspace/cli.sh"]
+COPY cli.py cli.py
+COPY schemachange.sh schemachange.sh
+RUN chmod u+x schemachange.sh
